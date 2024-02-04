@@ -7,9 +7,10 @@ interface Props {
 }
 
 function Option(props: Props){
-    
+
     const handleClick = () =>{
         props.onIndexChange(props.optionNum)
+        console.log(props)
     }
     
     return(

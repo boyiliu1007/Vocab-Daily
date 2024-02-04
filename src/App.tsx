@@ -10,9 +10,7 @@ function App() {
   const handleIndexChange = (newIndex :number) =>{
     setSelectedIndex(newIndex)
   }
-  useEffect(() => {
-    console.log(selectedIndex);
-  }, [selectedIndex]);
+  useEffect(() => {}, [selectedIndex]);
 
   const handleIsSubmitted = () =>{
     setIsSubmitted(true)
@@ -27,7 +25,7 @@ function App() {
           optionNum = {i} 
           answer = {answerIndex}
           selected = {selectedIndex === i} 
-          submitted = {false}
+          submitted = {isSubmitted}
         />
       )
     }
@@ -50,7 +48,7 @@ function App() {
           {renderOptions()}
           {
             isSubmitted? null: 
-            <button className = "h-10 w-20 mt-3 themeColor rounded-xl" onClick = {handleIsSubmitted}>
+            <button className = "h-10 w-20 mt-3 themeColor rounded-xl hover:mt-2.5 hover:h-11 hover:w-24" onClick = {handleIsSubmitted}>
               <h1 className="text-white">submit</h1>
             </button>
           }
