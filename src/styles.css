@@ -9,7 +9,12 @@
       background-size: cover;
   }
 
-  .introColor{
-    color: #4C75A3;
+  .themeColor{
+    background: #4C75A3;
   }
+  .custom-border {
+    border: 20px solid #4C75A3;
+    padding: 1rem;
+  }
+  
 }
